@@ -1,9 +1,3 @@
-/*
-This comment is to be removed when the pages are no longer in development
-#temp{
-    display: none;
-}
-*/
 
 html{
     height: 100%;
@@ -26,7 +20,6 @@ th{
 }
 
 #left{
-    /*background-image: linear-gradient(to right, #97D0A1, #598DC9);*/
     background-color: royalblue;
     box-shadow: 10px 0px 10px lightgray;
     color: white;
