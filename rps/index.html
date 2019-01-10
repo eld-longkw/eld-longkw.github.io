@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rock Paper Scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body id="bkg">
+    <script>
+        rockpaperscissors();
+        function rockpaperscissors() {
+            var rpsin = prompt("Please enter rock(r), paper(p), or scissors(s)");
+            var rps = ["rock","paper","scissors"];
+            var rand = rps[Math.floor(Math.random() * rps.length)];
+            switch (rpsin) {
+                case "r":
+                    switch (rand) {
+                        case "rock":
+                            document.getElementById("bkg").style.backgroundColor = "#efe58d";
+                            document.write("<span id='stat'>tie</span> ");
+                            document.write(': The computer chose rock you chose rock <br>');
+                            break;
+                        case "paper":
+                            document.getElementById("bkg").style.backgroundColor = "#ff928b";
+                            document.write("<span id='stat'>loss</span> ");
+                            document.write(': The computer chose paper you chose rock <br>');
+                            break;
+                        case "scissors":
+                            document.getElementById("bkg").style.backgroundColor = "#9be592";
+                            document.write("<span id='stat'>win</span> ");
+                            document.write(': The computer chose scissors you chose rock <br>');
+                            break;
+                        default:
+                            break;
+                    };
+                    break;
+                case "p":
+                    switch (rand) {
+                            case "rock":
+                                document.getElementById("bkg").style.backgroundColor = "#9be592";
+                                document.write("<span id='stat'>win</span> ");
+                                document.write(': The computer chose rock you chose paper <br>');
+                                break;
+                            case "paper":
+                                document.getElementById("bkg").style.backgroundColor = "#efe58d";
+                                document.write("<span id='stat'>tie</span> ");
+                                document.write(': The computer chose paper you chose paper <br>');
+                                break;
+                            case "scissors":
+                                document.getElementById("bkg").style.backgroundColor = "#ff928b";
+                                document.write("<span id='stat'>loss</span> ");
+                                document.write(': The computer chose scissors you chose paper <br>');
+                                break;
+                            default:
+                                break;
+                        };
+                    break;
+                case "s":
+                    switch (rand) {
+                            case "rock":
+                                document.getElementById("bkg").style.backgroundColor = "#ff928b";
+                                document.write("<span id='stat'>loss</span> ");
+                                document.write(': The computer chose rock you chose scissors <br>');
+                                break;
+                            case "paper":
+                                document.getElementById("bkg").style.backgroundColor = "#9be592";
+                                document.write("<span id='stat'>win</span> ");
+                                document.write(': The computer chose paper you chose scissors <br>');
+                                break;
+                            case "scissors":
+                                document.getElementById("bkg").style.backgroundColor = "#efe58d";
+                                document.write("<span id='stat'>tie</span> ");
+                                document.write(': The computer chose scissors you chose scissors <br>');
+                                break;
+                            default:
+                                break;
+                        };
+                    break;
+            
+                default:
+                    break;
+            };
+        };
+        function reload(){
+            location.reload();
+        };
+        window.addEventListener('keydown', function(e) {
+            if (e.keyCode == 13 || e.keyCode == 32){
+                reload();
+            }
+        }
+        );
+    </script>
+    <button onclick="reload()" id="pag">Play Again</button>
+</body>
+</html>

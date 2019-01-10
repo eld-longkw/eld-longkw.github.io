@@ -1,0 +1,25 @@
+body{
+    color: white;
+    font-size: 16vmin;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+}
+
+#stat{
+    font-weight: 900;
+}
+
+#pag{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 13vmax;
+    width: 100%;
+    border: 0px;
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 5vmin;
+    background-color: rgb(96, 168, 236);
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.438);
+
+}
